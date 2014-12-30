@@ -1,0 +1,481 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A8D7581A1A52D509003370B2 /* BudgetControlSwift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A8D758181A52D509003370B2 /* BudgetControlSwift.xcdatamodeld */; };
+		A8D7581F1A52D509003370B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8D7581D1A52D509003370B2 /* Main.storyboard */; };
+		A8D758211A52D509003370B2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8D758201A52D509003370B2 /* Images.xcassets */; };
+		A8D758241A52D509003370B2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8D758221A52D509003370B2 /* LaunchScreen.xib */; };
+		A8D758301A52D509003370B2 /* BudgetControlSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D7582F1A52D509003370B2 /* BudgetControlSwiftTests.swift */; };
+		A8D7583B1A52D541003370B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D7583A1A52D541003370B2 /* AppDelegate.swift */; };
+		A8D758411A52D621003370B2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D758401A52D621003370B2 /* HomeViewController.swift */; };
+		A8D758431A52F060003370B2 /* BudgetContainerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D758421A52F060003370B2 /* BudgetContainerTableViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A8D7582A1A52D509003370B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A8D758091A52D509003370B2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A8D758101A52D509003370B2;
+			remoteInfo = BudgetControlSwift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A8D758111A52D509003370B2 /* BudgetControlSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BudgetControlSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8D758151A52D509003370B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8D758191A52D509003370B2 /* BudgetControlSwift.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BudgetControlSwift.xcdatamodel; sourceTree = "<group>"; };
+		A8D7581E1A52D509003370B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A8D758201A52D509003370B2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A8D758231A52D509003370B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		A8D758291A52D509003370B2 /* BudgetControlSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BudgetControlSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8D7582E1A52D509003370B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8D7582F1A52D509003370B2 /* BudgetControlSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetControlSwiftTests.swift; sourceTree = "<group>"; };
+		A8D7583A1A52D541003370B2 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A8D758401A52D621003370B2 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A8D758421A52F060003370B2 /* BudgetContainerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BudgetContainerTableViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A8D7580E1A52D509003370B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8D758261A52D509003370B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A8D758081A52D509003370B2 = {
+			isa = PBXGroup;
+			children = (
+				A8D758131A52D509003370B2 /* BudgetControlSwift */,
+				A8D7582C1A52D509003370B2 /* BudgetControlSwiftTests */,
+				A8D758121A52D509003370B2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A8D758121A52D509003370B2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A8D758111A52D509003370B2 /* BudgetControlSwift.app */,
+				A8D758291A52D509003370B2 /* BudgetControlSwiftTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A8D758131A52D509003370B2 /* BudgetControlSwift */ = {
+			isa = PBXGroup;
+			children = (
+				A8D758391A52D541003370B2 /* Classes */,
+				A8D7583C1A52D54F003370B2 /* Resources */,
+				A8D758141A52D509003370B2 /* Supporting Files */,
+			);
+			path = BudgetControlSwift;
+			sourceTree = "<group>";
+		};
+		A8D758141A52D509003370B2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A8D758151A52D509003370B2 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A8D7582C1A52D509003370B2 /* BudgetControlSwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				A8D7582F1A52D509003370B2 /* BudgetControlSwiftTests.swift */,
+				A8D7582D1A52D509003370B2 /* Supporting Files */,
+			);
+			path = BudgetControlSwiftTests;
+			sourceTree = "<group>";
+		};
+		A8D7582D1A52D509003370B2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A8D7582E1A52D509003370B2 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A8D758391A52D541003370B2 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A8D7583A1A52D541003370B2 /* AppDelegate.swift */,
+				A8D7583F1A52D601003370B2 /* ViewControllers */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		A8D7583C1A52D54F003370B2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A8D758201A52D509003370B2 /* Images.xcassets */,
+				A8D7583E1A52D576003370B2 /* UI */,
+				A8D7583D1A52D55D003370B2 /* DataModel */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		A8D7583D1A52D55D003370B2 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				A8D758181A52D509003370B2 /* BudgetControlSwift.xcdatamodeld */,
+			);
+			name = DataModel;
+			sourceTree = "<group>";
+		};
+		A8D7583E1A52D576003370B2 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				A8D7581D1A52D509003370B2 /* Main.storyboard */,
+				A8D758221A52D509003370B2 /* LaunchScreen.xib */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		A8D7583F1A52D601003370B2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A8D758401A52D621003370B2 /* HomeViewController.swift */,
+				A8D758421A52F060003370B2 /* BudgetContainerTableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A8D758101A52D509003370B2 /* BudgetControlSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8D758331A52D509003370B2 /* Build configuration list for PBXNativeTarget "BudgetControlSwift" */;
+			buildPhases = (
+				A8D7580D1A52D509003370B2 /* Sources */,
+				A8D7580E1A52D509003370B2 /* Frameworks */,
+				A8D7580F1A52D509003370B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BudgetControlSwift;
+			productName = BudgetControlSwift;
+			productReference = A8D758111A52D509003370B2 /* BudgetControlSwift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A8D758281A52D509003370B2 /* BudgetControlSwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8D758361A52D509003370B2 /* Build configuration list for PBXNativeTarget "BudgetControlSwiftTests" */;
+			buildPhases = (
+				A8D758251A52D509003370B2 /* Sources */,
+				A8D758261A52D509003370B2 /* Frameworks */,
+				A8D758271A52D509003370B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A8D7582B1A52D509003370B2 /* PBXTargetDependency */,
+			);
+			name = BudgetControlSwiftTests;
+			productName = BudgetControlSwiftTests;
+			productReference = A8D758291A52D509003370B2 /* BudgetControlSwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A8D758091A52D509003370B2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Roman Rybachenko";
+				TargetAttributes = {
+					A8D758101A52D509003370B2 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					A8D758281A52D509003370B2 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = A8D758101A52D509003370B2;
+					};
+				};
+			};
+			buildConfigurationList = A8D7580C1A52D509003370B2 /* Build configuration list for PBXProject "BudgetControlSwift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A8D758081A52D509003370B2;
+			productRefGroup = A8D758121A52D509003370B2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A8D758101A52D509003370B2 /* BudgetControlSwift */,
+				A8D758281A52D509003370B2 /* BudgetControlSwiftTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A8D7580F1A52D509003370B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8D7581F1A52D509003370B2 /* Main.storyboard in Resources */,
+				A8D758241A52D509003370B2 /* LaunchScreen.xib in Resources */,
+				A8D758211A52D509003370B2 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8D758271A52D509003370B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A8D7580D1A52D509003370B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8D758431A52F060003370B2 /* BudgetContainerTableViewController.swift in Sources */,
+				A8D7583B1A52D541003370B2 /* AppDelegate.swift in Sources */,
+				A8D7581A1A52D509003370B2 /* BudgetControlSwift.xcdatamodeld in Sources */,
+				A8D758411A52D621003370B2 /* HomeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8D758251A52D509003370B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8D758301A52D509003370B2 /* BudgetControlSwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A8D7582B1A52D509003370B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A8D758101A52D509003370B2 /* BudgetControlSwift */;
+			targetProxy = A8D7582A1A52D509003370B2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A8D7581D1A52D509003370B2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A8D7581E1A52D509003370B2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A8D758221A52D509003370B2 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A8D758231A52D509003370B2 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A8D758311A52D509003370B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A8D758321A52D509003370B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A8D758341A52D509003370B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BudgetControlSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A8D758351A52D509003370B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BudgetControlSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A8D758371A52D509003370B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BudgetControlSwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BudgetControlSwift.app/BudgetControlSwift";
+			};
+			name = Debug;
+		};
+		A8D758381A52D509003370B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BudgetControlSwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BudgetControlSwift.app/BudgetControlSwift";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A8D7580C1A52D509003370B2 /* Build configuration list for PBXProject "BudgetControlSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8D758311A52D509003370B2 /* Debug */,
+				A8D758321A52D509003370B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A8D758331A52D509003370B2 /* Build configuration list for PBXNativeTarget "BudgetControlSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8D758341A52D509003370B2 /* Debug */,
+				A8D758351A52D509003370B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A8D758361A52D509003370B2 /* Build configuration list for PBXNativeTarget "BudgetControlSwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8D758371A52D509003370B2 /* Debug */,
+				A8D758381A52D509003370B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A8D758181A52D509003370B2 /* BudgetControlSwift.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A8D758191A52D509003370B2 /* BudgetControlSwift.xcdatamodel */,
+			);
+			currentVersion = A8D758191A52D509003370B2 /* BudgetControlSwift.xcdatamodel */;
+			path = BudgetControlSwift.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A8D758091A52D509003370B2 /* Project object */;
+}
