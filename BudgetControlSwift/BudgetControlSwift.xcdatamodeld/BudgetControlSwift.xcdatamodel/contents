@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6252" systemVersion="14B25" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="CDBudgetMonth" syncable="YES">
+    <entity name="CDBudgetMonth" representedClassName="CDBudgetMonth" syncable="YES">
         <attribute name="currency" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="monthDate" optional="YES" attributeType="Date" syncable="YES"/>
         <relationship name="entries" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDEntry" inverseName="budget" inverseEntity="CDEntry" syncable="YES"/>
     </entity>
-    <entity name="CDEntry" syncable="YES">
+    <entity name="CDEntry" representedClassName="CDEntry" syncable="YES">
         <attribute name="eCheckAddress" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="eDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="eDescription" optional="YES" attributeType="String" syncable="YES"/>
@@ -14,7 +14,7 @@
         <relationship name="budget" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDBudgetMonth" inverseName="entries" inverseEntity="CDBudgetMonth" syncable="YES"/>
         <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDEntryCategory" inverseName="entries" inverseEntity="CDEntryCategory" syncable="YES"/>
     </entity>
-    <entity name="CDEntryCategory" syncable="YES">
+    <entity name="CDEntryCategory" representedClassName="CDEntryCategory" syncable="YES">
         <attribute name="cName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="cType" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="entries" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDEntry" inverseName="category" inverseEntity="CDEntry" syncable="YES"/>

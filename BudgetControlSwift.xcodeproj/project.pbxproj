@@ -15,6 +15,10 @@
 		A8D7583B1A52D541003370B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D7583A1A52D541003370B2 /* AppDelegate.swift */; };
 		A8D758411A52D621003370B2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D758401A52D621003370B2 /* HomeViewController.swift */; };
 		A8D758431A52F060003370B2 /* BudgetContainerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D758421A52F060003370B2 /* BudgetContainerTableViewController.swift */; };
+		A8D7584C1A53F7A0003370B2 /* CDEntryCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D7584B1A53F7A0003370B2 /* CDEntryCategory.m */; };
+		A8D7584F1A53F7A1003370B2 /* CDBudgetMonth.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D7584E1A53F7A1003370B2 /* CDBudgetMonth.m */; };
+		A8D758521A53F7A1003370B2 /* CDEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D758511A53F7A1003370B2 /* CDEntry.m */; };
+		A8D758561A53F9E8003370B2 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D758551A53F9E8003370B2 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,15 @@
 		A8D7583A1A52D541003370B2 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8D758401A52D621003370B2 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A8D758421A52F060003370B2 /* BudgetContainerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BudgetContainerTableViewController.swift; sourceTree = "<group>"; };
+		A8D758491A53F79F003370B2 /* BudgetControlSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BudgetControlSwift-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		A8D7584A1A53F7A0003370B2 /* CDEntryCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDEntryCategory.h; sourceTree = "<group>"; };
+		A8D7584B1A53F7A0003370B2 /* CDEntryCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDEntryCategory.m; sourceTree = "<group>"; };
+		A8D7584D1A53F7A1003370B2 /* CDBudgetMonth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDBudgetMonth.h; sourceTree = "<group>"; };
+		A8D7584E1A53F7A1003370B2 /* CDBudgetMonth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDBudgetMonth.m; sourceTree = "<group>"; };
+		A8D758501A53F7A1003370B2 /* CDEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDEntry.h; sourceTree = "<group>"; };
+		A8D758511A53F7A1003370B2 /* CDEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDEntry.m; sourceTree = "<group>"; };
+		A8D758541A53F840003370B2 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = Classes/PrefixHeader.pch; sourceTree = "<group>"; };
+		A8D758551A53F9E8003370B2 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +104,9 @@
 		A8D758141A52D509003370B2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A8D758491A53F79F003370B2 /* BudgetControlSwift-Bridging-Header.h */,
 				A8D758151A52D509003370B2 /* Info.plist */,
+				A8D758541A53F840003370B2 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -116,6 +131,9 @@
 		A8D758391A52D541003370B2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A8D758461A53F6C0003370B2 /* Externals */,
+				A8D758441A53F681003370B2 /* Model */,
+				A8D758451A53F68B003370B2 /* Views */,
 				A8D7583A1A52D541003370B2 /* AppDelegate.swift */,
 				A8D7583F1A52D601003370B2 /* ViewControllers */,
 			);
@@ -156,6 +174,50 @@
 				A8D758421A52F060003370B2 /* BudgetContainerTableViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A8D758441A53F681003370B2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A8D758481A53F778003370B2 /* CDModel */,
+				A8D758471A53F6CF003370B2 /* Managers */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A8D758451A53F68B003370B2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A8D758461A53F6C0003370B2 /* Externals */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Externals;
+			sourceTree = "<group>";
+		};
+		A8D758471A53F6CF003370B2 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				A8D758551A53F9E8003370B2 /* CoreDataManager.swift */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		A8D758481A53F778003370B2 /* CDModel */ = {
+			isa = PBXGroup;
+			children = (
+				A8D758501A53F7A1003370B2 /* CDEntry.h */,
+				A8D758511A53F7A1003370B2 /* CDEntry.m */,
+				A8D7584D1A53F7A1003370B2 /* CDBudgetMonth.h */,
+				A8D7584E1A53F7A1003370B2 /* CDBudgetMonth.m */,
+				A8D7584A1A53F7A0003370B2 /* CDEntryCategory.h */,
+				A8D7584B1A53F7A0003370B2 /* CDEntryCategory.m */,
+			);
+			name = CDModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +322,11 @@
 			files = (
 				A8D758431A52F060003370B2 /* BudgetContainerTableViewController.swift in Sources */,
 				A8D7583B1A52D541003370B2 /* AppDelegate.swift in Sources */,
+				A8D7584C1A53F7A0003370B2 /* CDEntryCategory.m in Sources */,
 				A8D7581A1A52D509003370B2 /* BudgetControlSwift.xcdatamodeld in Sources */,
+				A8D7584F1A53F7A1003370B2 /* CDBudgetMonth.m in Sources */,
+				A8D758521A53F7A1003370B2 /* CDEntry.m in Sources */,
+				A8D758561A53F9E8003370B2 /* CoreDataManager.swift in Sources */,
 				A8D758411A52D621003370B2 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,9 +450,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BudgetControlSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BudgetControlSwift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -394,9 +463,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BudgetControlSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BudgetControlSwift-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -453,6 +524,7 @@
 				A8D758351A52D509003370B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A8D758361A52D509003370B2 /* Build configuration list for PBXNativeTarget "BudgetControlSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -461,6 +533,7 @@
 				A8D758381A52D509003370B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
