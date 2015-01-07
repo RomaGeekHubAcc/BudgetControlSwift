@@ -22,14 +22,31 @@ class HomeViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
+    // MARK: - Action methods
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func addIncome(sender: AnyObject) {
+        var addIncomeVC = self.storyboard?.instantiateViewControllerWithIdentifier("AddEntryViewController") as AddEntryViewController
+        addIncomeVC.entryType = EntryType.EntryTypeIncome.rawValue
+        addIncomeVC.title = "Add Income"
+        
+        let navController: UINavigationController = UINavigationController(rootViewController: addIncomeVC)
+        navController.modalTransitionStyle = UIModalTransitionStyle.CoverVertical
+        
+        self.presentViewController(navController, animated: true, completion: nil)
     }
-    */
+    
+    @IBAction func addExpense(sender: AnyObject) {
+        var addExpenseVC = self.storyboard?.instantiateViewControllerWithIdentifier("AddEntryViewController") as AddEntryViewController
+        addExpenseVC.entryType = EntryType.EntryTypeExpense.rawValue
+        addExpenseVC.title = "Add Expense"
+        
+        let navController: UINavigationController = UINavigationController(rootViewController: addExpenseVC)
+        navController.modalTransitionStyle = UIModalTransitionStyle.CoverVertical
+        
+        self.presentViewController(navController, animated: true, completion: nil)
+    }
+    
+    
+    
 
 }

@@ -15,6 +15,7 @@
         <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDEntryCategory" inverseName="entries" inverseEntity="CDEntryCategory" syncable="YES"/>
     </entity>
     <entity name="CDEntryCategory" representedClassName="CDEntryCategory" syncable="YES">
+        <attribute name="cIconName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="cName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="cType" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="entries" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDEntry" inverseName="category" inverseEntity="CDEntry" syncable="YES"/>
@@ -22,6 +23,6 @@
     <elements>
         <element name="CDBudgetMonth" positionX="-56" positionY="-351" width="128" height="88"/>
         <element name="CDEntry" positionX="144" positionY="-396" width="128" height="148"/>
-        <element name="CDEntryCategory" positionX="376" positionY="-340" width="128" height="88"/>
+        <element name="CDEntryCategory" positionX="376" positionY="-340" width="128" height="103"/>
     </elements>
 </model>

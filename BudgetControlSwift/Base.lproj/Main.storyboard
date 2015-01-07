@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="settings" id="imb-z9-pe9"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings_icon" id="imb-z9-pe9"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="95b-58-daF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -57,12 +57,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Chart" image="chart" id="4VU-N9-DnS"/>
+                    <tabBarItem key="tabBarItem" title="Chart" image="chart_icon" id="4VU-N9-DnS"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SbI-jO-WPt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="576" y="1726"/>
+            <point key="canvasLocation" x="578" y="1676"/>
         </scene>
         <!--Add Expense-->
         <scene sceneID="JBU-O8-Dgc">
@@ -77,7 +77,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Add Expense" image="expense" id="6qA-Y2-KMf"/>
+                    <tabBarItem key="tabBarItem" title="Add Expense" image="expense_icon" id="6qA-Y2-KMf"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fxk-xT-DbM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -116,11 +116,58 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bHq-6M-UtM">
+                                <rect key="frame" x="0.0" y="31" width="320" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="mOY-6f-8ZU"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="iNu-24-zX6" kind="embed" id="gr1-Fz-ZUs"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WLX-oy-Qpq">
+                                <rect key="frame" x="16" y="197" width="83" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Dym-Yo-7WL"/>
+                                </constraints>
+                                <state key="normal" title="Add Income">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addIncome:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ns9-7H-Cup"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8T-Ww-nlC">
+                                <rect key="frame" x="212" y="197" width="92" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="hEw-jy-rdq"/>
+                                </constraints>
+                                <state key="normal" title="Add Expense">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addExpense:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="yS2-xM-ETE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bHq-6M-UtM" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="AAh-kH-tVz"/>
+                            <constraint firstAttribute="trailing" secondItem="bHq-6M-UtM" secondAttribute="trailing" id="BKJ-KW-w4z"/>
+                            <constraint firstItem="s8T-Ww-nlC" firstAttribute="top" secondItem="bHq-6M-UtM" secondAttribute="bottom" constant="26" id="IcO-it-QSX"/>
+                            <constraint firstAttribute="trailing" secondItem="s8T-Ww-nlC" secondAttribute="trailing" constant="16" id="diy-aO-rr4"/>
+                            <constraint firstItem="s8T-Ww-nlC" firstAttribute="leading" secondItem="WLX-oy-Qpq" secondAttribute="trailing" constant="113" id="kin-xF-C5x"/>
+                            <constraint firstItem="WLX-oy-Qpq" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="leq-gQ-cyc"/>
+                            <constraint firstItem="WLX-oy-Qpq" firstAttribute="top" secondItem="bHq-6M-UtM" secondAttribute="bottom" constant="26" id="s8A-26-QOk"/>
+                            <constraint firstAttribute="centerX" secondItem="bHq-6M-UtM" secondAttribute="centerX" id="u8e-W6-FXY"/>
+                            <constraint firstItem="bHq-6M-UtM" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="31" id="zCe-oz-yxv"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Budget" id="j6a-Ib-Cpg"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -131,10 +178,11 @@
         <scene sceneID="9ph-kK-jTs">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="K0m-Dg-X5m" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="budgetState" id="2FG-w1-gCz"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="budgetState_icon" id="2FG-w1-gCz"/>
                     <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="M6T-lR-Ybe">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="M6T-lR-Ybe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -241,19 +289,33 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WMQ-XW-uK9" id="BrX-N5-dWS">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.00 UAH" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJX-Ob-6bY">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00 UAH" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJX-Ob-6bY">
                                                     <rect key="frame" x="226" y="8" width="74" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="F7f-2K-Vyv"/>
+                                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="184" id="vyy-k4-ILD"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Available:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Itx-JK-nUt">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Itx-JK-nUt">
                                                     <rect key="frame" x="34" y="8" width="77" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="77" id="azN-hl-Dha"/>
+                                                        <constraint firstAttribute="height" constant="20" id="pgB-Lk-L8A"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="bJX-Ob-6bY" secondAttribute="trailing" constant="20" id="BsM-UV-jrf"/>
+                                                <constraint firstItem="Itx-JK-nUt" firstAttribute="top" secondItem="BrX-N5-dWS" secondAttribute="top" constant="8" id="Dhn-j3-W2n"/>
+                                                <constraint firstItem="bJX-Ob-6bY" firstAttribute="top" secondItem="BrX-N5-dWS" secondAttribute="top" constant="8" id="HNc-zi-32v"/>
+                                                <constraint firstItem="Itx-JK-nUt" firstAttribute="leading" secondItem="BrX-N5-dWS" secondAttribute="leading" constant="34" id="ZAg-n4-cn4"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -269,14 +331,123 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oPU-ye-WGb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1418" y="740"/>
+            <point key="canvasLocation" x="1376" y="677"/>
+        </scene>
+        <!--Add Entry View Controller-->
+        <scene sceneID="Vbc-pi-Q0d">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yyo-Dc-0QJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="AddEntryViewController" automaticallyAdjustsScrollViewInsets="NO" id="pkK-OV-Gyy" customClass="AddEntryViewController" customModule="BudgetControlSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kPt-Ux-hw9"/>
+                        <viewControllerLayoutGuide type="bottom" id="Cqk-Qy-Bpf"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="aBr-2f-PbY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="0.00 UAH" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LFc-Mh-U1J">
+                                <rect key="frame" x="16" y="18" width="288" height="39"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="cbu-lc-6Kq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Choose Category" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mwM-kq-UMW">
+                                <rect key="frame" x="16" y="77" width="288" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NEZ-qx-CBK">
+                                <rect key="frame" x="0.0" y="342" width="320" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="GBC-Bo-bKU"/>
+                                </constraints>
+                            </pickerView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="category description" translatesAutoresizingMaskIntoConstraints="NO" id="1tz-sh-TiW">
+                                <rect key="frame" x="16" y="131" width="288" height="77"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="hGg-bt-FAy"/>
+                                </constraints>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="mwM-kq-UMW" secondAttribute="trailing" constant="16" id="3TM-XK-VEd"/>
+                            <constraint firstItem="mwM-kq-UMW" firstAttribute="top" secondItem="LFc-Mh-U1J" secondAttribute="bottom" constant="20" id="53H-SK-0V1"/>
+                            <constraint firstItem="1tz-sh-TiW" firstAttribute="top" secondItem="mwM-kq-UMW" secondAttribute="bottom" constant="24" id="DpB-2X-hA6"/>
+                            <constraint firstAttribute="centerX" secondItem="LFc-Mh-U1J" secondAttribute="centerX" id="IEC-2v-IKN"/>
+                            <constraint firstAttribute="centerX" secondItem="mwM-kq-UMW" secondAttribute="centerX" id="NEH-lm-TYV"/>
+                            <constraint firstItem="1tz-sh-TiW" firstAttribute="leading" secondItem="aBr-2f-PbY" secondAttribute="leading" constant="16" id="QqJ-Jv-Bld"/>
+                            <constraint firstAttribute="trailing" secondItem="1tz-sh-TiW" secondAttribute="trailing" constant="16" id="S0N-MI-tdO"/>
+                            <constraint firstAttribute="trailing" secondItem="LFc-Mh-U1J" secondAttribute="trailing" constant="16" id="Skf-kH-KZz"/>
+                            <constraint firstItem="NEZ-qx-CBK" firstAttribute="leading" secondItem="aBr-2f-PbY" secondAttribute="leading" id="VEb-6i-FxA"/>
+                            <constraint firstItem="mwM-kq-UMW" firstAttribute="leading" secondItem="aBr-2f-PbY" secondAttribute="leading" constant="16" id="aPV-lg-E7H"/>
+                            <constraint firstAttribute="centerX" secondItem="NEZ-qx-CBK" secondAttribute="centerX" id="dMn-af-bKh"/>
+                            <constraint firstItem="LFc-Mh-U1J" firstAttribute="top" secondItem="kPt-Ux-hw9" secondAttribute="bottom" constant="18" id="feL-1x-6eX"/>
+                            <constraint firstItem="Cqk-Qy-Bpf" firstAttribute="top" secondItem="NEZ-qx-CBK" secondAttribute="bottom" id="g7b-ak-I2u"/>
+                            <constraint firstAttribute="trailing" secondItem="NEZ-qx-CBK" secondAttribute="trailing" id="ins-Mu-UHJ"/>
+                            <constraint firstItem="LFc-Mh-U1J" firstAttribute="leading" secondItem="aBr-2f-PbY" secondAttribute="leading" constant="16" id="oIk-oz-SzM"/>
+                            <constraint firstAttribute="centerX" secondItem="1tz-sh-TiW" secondAttribute="centerX" id="vcr-DO-v2b"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="sQl-Vu-Jrc">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="C5y-P5-C3s">
+                            <connections>
+                                <action selector="cancel:" destination="pkK-OV-Gyy" id="74h-67-5mv"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="84f-bS-DwJ">
+                            <connections>
+                                <action selector="addEntry:" destination="pkK-OV-Gyy" id="zCY-IP-bcF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="categoryPickerView" destination="NEZ-qx-CBK" id="bWy-jW-p9V"/>
+                        <outlet property="chooseCategoryTextField" destination="mwM-kq-UMW" id="7pp-r2-UX3"/>
+                        <outlet property="descriptionTextView" destination="1tz-sh-TiW" id="bSF-eE-G29"/>
+                        <outlet property="moneyTextField" destination="LFc-Mh-U1J" id="pnl-k8-mcJ"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2131" y="885"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Kkk-u8-Dz9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5bR-Iq-oBx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="cnd-Fa-OJt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pkK-OV-Gyy" kind="relationship" relationship="rootViewController" id="Rpb-sk-13c"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yJ2-Tu-LPF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1743" y="885"/>
         </scene>
     </scenes>
     <resources>
         <image name="bill_icon" width="25" height="25"/>
-        <image name="budgetState" width="25" height="25"/>
-        <image name="chart" width="25" height="25"/>
-        <image name="expense" width="25" height="25"/>
-        <image name="settings" width="25" height="25"/>
+        <image name="budgetState_icon" width="25" height="25"/>
+        <image name="chart_icon" width="25" height="25"/>
+        <image name="expense_icon" width="25" height="25"/>
+        <image name="settings_icon" width="25" height="25"/>
     </resources>
 </document>
