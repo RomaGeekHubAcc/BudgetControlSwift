@@ -28,6 +28,7 @@ class HomeViewController: UIViewController {
         var addIncomeVC = self.storyboard?.instantiateViewControllerWithIdentifier("AddEntryViewController") as AddEntryViewController
         addIncomeVC.entryType = EntryType.EntryTypeIncome.rawValue
         addIncomeVC.title = "Add Income"
+        addIncomeVC.currensy = "UAH";
         
         let navController: UINavigationController = UINavigationController(rootViewController: addIncomeVC)
         navController.modalTransitionStyle = UIModalTransitionStyle.CoverVertical
@@ -39,6 +40,7 @@ class HomeViewController: UIViewController {
         var addExpenseVC = self.storyboard?.instantiateViewControllerWithIdentifier("AddEntryViewController") as AddEntryViewController
         addExpenseVC.entryType = EntryType.EntryTypeExpense.rawValue
         addExpenseVC.title = "Add Expense"
+        addExpenseVC.currensy = "UAH";
         
         let navController: UINavigationController = UINavigationController(rootViewController: addExpenseVC)
         navController.modalTransitionStyle = UIModalTransitionStyle.CoverVertical

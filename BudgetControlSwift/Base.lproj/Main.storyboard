@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3iy-Qe-XHA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3iy-Qe-XHA">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
         <!--Settings-->
@@ -336,7 +336,6 @@
         <!--Add Entry View Controller-->
         <scene sceneID="Vbc-pi-Q0d">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Yyo-Dc-0QJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="AddEntryViewController" automaticallyAdjustsScrollViewInsets="NO" id="pkK-OV-Gyy" customClass="AddEntryViewController" customModule="BudgetControlSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kPt-Ux-hw9"/>
@@ -346,6 +345,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="category description" translatesAutoresizingMaskIntoConstraints="NO" id="1tz-sh-TiW">
+                                <rect key="frame" x="16" y="131" width="288" height="77"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="hGg-bt-FAy"/>
+                                </constraints>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                            </textView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="0.00 UAH" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LFc-Mh-U1J">
                                 <rect key="frame" x="16" y="18" width="288" height="39"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -363,37 +372,27 @@
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NEZ-qx-CBK">
                                 <rect key="frame" x="0.0" y="342" width="320" height="162"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="162" id="GBC-Bo-bKU"/>
+                                    <constraint firstAttribute="height" constant="162" id="gWa-Fs-6Nf"/>
                                 </constraints>
                             </pickerView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="category description" translatesAutoresizingMaskIntoConstraints="NO" id="1tz-sh-TiW">
-                                <rect key="frame" x="16" y="131" width="288" height="77"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="77" id="hGg-bt-FAy"/>
-                                </constraints>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
-                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="mwM-kq-UMW" secondAttribute="trailing" constant="16" id="3TM-XK-VEd"/>
                             <constraint firstItem="mwM-kq-UMW" firstAttribute="top" secondItem="LFc-Mh-U1J" secondAttribute="bottom" constant="20" id="53H-SK-0V1"/>
+                            <constraint firstItem="Cqk-Qy-Bpf" firstAttribute="top" secondItem="NEZ-qx-CBK" secondAttribute="bottom" id="Bcj-3E-7SB"/>
                             <constraint firstItem="1tz-sh-TiW" firstAttribute="top" secondItem="mwM-kq-UMW" secondAttribute="bottom" constant="24" id="DpB-2X-hA6"/>
                             <constraint firstAttribute="centerX" secondItem="LFc-Mh-U1J" secondAttribute="centerX" id="IEC-2v-IKN"/>
                             <constraint firstAttribute="centerX" secondItem="mwM-kq-UMW" secondAttribute="centerX" id="NEH-lm-TYV"/>
                             <constraint firstItem="1tz-sh-TiW" firstAttribute="leading" secondItem="aBr-2f-PbY" secondAttribute="leading" constant="16" id="QqJ-Jv-Bld"/>
                             <constraint firstAttribute="trailing" secondItem="1tz-sh-TiW" secondAttribute="trailing" constant="16" id="S0N-MI-tdO"/>
                             <constraint firstAttribute="trailing" secondItem="LFc-Mh-U1J" secondAttribute="trailing" constant="16" id="Skf-kH-KZz"/>
-                            <constraint firstItem="NEZ-qx-CBK" firstAttribute="leading" secondItem="aBr-2f-PbY" secondAttribute="leading" id="VEb-6i-FxA"/>
                             <constraint firstItem="mwM-kq-UMW" firstAttribute="leading" secondItem="aBr-2f-PbY" secondAttribute="leading" constant="16" id="aPV-lg-E7H"/>
-                            <constraint firstAttribute="centerX" secondItem="NEZ-qx-CBK" secondAttribute="centerX" id="dMn-af-bKh"/>
                             <constraint firstItem="LFc-Mh-U1J" firstAttribute="top" secondItem="kPt-Ux-hw9" secondAttribute="bottom" constant="18" id="feL-1x-6eX"/>
-                            <constraint firstItem="Cqk-Qy-Bpf" firstAttribute="top" secondItem="NEZ-qx-CBK" secondAttribute="bottom" id="g7b-ak-I2u"/>
-                            <constraint firstAttribute="trailing" secondItem="NEZ-qx-CBK" secondAttribute="trailing" id="ins-Mu-UHJ"/>
+                            <constraint firstItem="NEZ-qx-CBK" firstAttribute="leading" secondItem="aBr-2f-PbY" secondAttribute="leading" id="o3n-ov-bpr"/>
                             <constraint firstItem="LFc-Mh-U1J" firstAttribute="leading" secondItem="aBr-2f-PbY" secondAttribute="leading" constant="16" id="oIk-oz-SzM"/>
+                            <constraint firstAttribute="centerX" secondItem="NEZ-qx-CBK" secondAttribute="centerX" id="sXq-gk-tWb"/>
+                            <constraint firstAttribute="trailing" secondItem="NEZ-qx-CBK" secondAttribute="trailing" id="sjo-gN-VwJ"/>
                             <constraint firstAttribute="centerX" secondItem="1tz-sh-TiW" secondAttribute="centerX" id="vcr-DO-v2b"/>
                         </constraints>
                     </view>
@@ -419,6 +418,7 @@
                         <outlet property="moneyTextField" destination="LFc-Mh-U1J" id="pnl-k8-mcJ"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yyo-Dc-0QJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2131" y="885"/>
         </scene>

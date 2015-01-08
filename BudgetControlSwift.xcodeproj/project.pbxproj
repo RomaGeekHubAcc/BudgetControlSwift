@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A881890C1A5E8CAA008D583B /* CategoryPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A881890B1A5E8CAA008D583B /* CategoryPickerView.swift */; };
 		A8A585201A5AB34800BF87BB /* CDEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A5851F1A5AB34800BF87BB /* CDEntry.swift */; };
 		A8A585221A5AB3CF00BF87BB /* CDBudgetMonth.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A585211A5AB3CF00BF87BB /* CDBudgetMonth.swift */; };
 		A8A585241A5AB40000BF87BB /* CDEntryCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A585231A5AB40000BF87BB /* CDEntryCategory.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A881890B1A5E8CAA008D583B /* CategoryPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryPickerView.swift; sourceTree = "<group>"; };
 		A8A5851F1A5AB34800BF87BB /* CDEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDEntry.swift; sourceTree = "<group>"; };
 		A8A585211A5AB3CF00BF87BB /* CDBudgetMonth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDBudgetMonth.swift; sourceTree = "<group>"; };
 		A8A585231A5AB40000BF87BB /* CDEntryCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDEntryCategory.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 		A8D758451A53F68B003370B2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A881890B1A5E8CAA008D583B /* CategoryPickerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				A8A585271A5AB84900BF87BB /* Utilities.swift in Sources */,
 				A8D758561A53F9E8003370B2 /* CoreDataManager.swift in Sources */,
 				A8D758411A52D621003370B2 /* HomeViewController.swift in Sources */,
+				A881890C1A5E8CAA008D583B /* CategoryPickerView.swift in Sources */,
 				A8A5852C1A5AD5F800BF87BB /* DateFormatterManager.swift in Sources */,
 				A8A585241A5AB40000BF87BB /* CDEntryCategory.swift in Sources */,
 			);

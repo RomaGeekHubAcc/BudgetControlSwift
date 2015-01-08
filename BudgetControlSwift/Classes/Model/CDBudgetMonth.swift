@@ -17,6 +17,7 @@ class CDBudgetMonth: NSManagedObject {
     @NSManaged var monthDate: NSDate
     @NSManaged var entries: NSSet
     
+    
     //MARK: Class Methods
     class func getBudget(date:NSDate, context:NSManagedObjectContext) -> CDBudgetMonth {
         var budget: CDBudgetMonth?

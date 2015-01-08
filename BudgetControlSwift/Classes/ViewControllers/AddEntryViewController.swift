@@ -10,11 +10,17 @@ import CoreData
 import UIKit
 import Foundation
 
-class AddEntryViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate {
+class AddEntryViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
     
     //MARK: variables
-    var entryType: NSInteger?
-    var categories: [AnyObject]?
+    var entryType: NSInteger?;
+    var currensy: String = "";
+    
+    var categories: [AnyObject] = [];
+    var isCategSelecting: Bool = false;
+    
+    var prise: Double = 0.0;
+    
     
     @IBOutlet weak var moneyTextField: UITextField!
     @IBOutlet weak var chooseCategoryTextField: UITextField!
@@ -25,22 +31,28 @@ class AddEntryViewController: UIViewController, UITextFieldDelegate, UITextViewD
     
     //MARK: Interfase methods
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad();
         
-        let manObjContext = CoreDataManager.sharedInstance.managedObjectContext
-        let nType:NSNumber = NSNumber(integer: entryType!)
-        categories = CDEntryCategory.getAllCategries(nType, context: manObjContext!)
+        let manObjContext = CoreDataManager.sharedInstance.managedObjectContext!;
+        let nType:NSNumber = NSNumber(integer: entryType!);
+        categories = CDEntryCategory.getAllCategries(nType, context: manObjContext);
         
-        moneyTextField.delegate = self
-        chooseCategoryTextField.delegate = self
-        descriptionTextView.delegate = self
+        moneyTextField.placeholder = "0.00 \(currensy)"
         
-//        categoryPickerView.delegate = self
-//        categoryPickerView.dataSource = self
+        moneyTextField.delegate = self;
+        chooseCategoryTextField.delegate = self;
+        descriptionTextView.delegate = self;
+        
+        categoryPickerView.delegate = self;
+        categoryPickerView.dataSource = self;
+        categoryPickerView.backgroundColor = UIColor.lightGrayColor()
+        categoryPickerView.hidden = true;
     }
     
      override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
-        self.view.endEditing(true)
+        self.view.endEditing(true);
+        categoryPickerView.hidden = true;
+        isCategSelecting = false;
         
     }
 
@@ -50,18 +62,58 @@ class AddEntryViewController: UIViewController, UITextFieldDelegate, UITextViewD
         self.view.endEditing(true)
         self.dismissViewControllerAnimated(true, completion: nil)
     }
+    
     @IBAction func addEntry(sender: AnyObject) {
+        self.hideKeyboardAndPicker();
+        
+        if  self.checkFillAllFields() {
+            println("add entry");
+        }
         
     }
     
     
-    //MARK: Delegated methods - UITextFieldDelegate
+    //MARK: Delegated methods:
+    
+    //MARK: — UITextFieldDelegate
     func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
         if  textField.tag == 1 {
-            return false
+            self.view.endEditing(true);
+            
+            if textField.text == "" {
+                var choosenCategory: CDEntryCategory = categories[0] as CDEntryCategory;
+                textField.text = choosenCategory.cName;
+            }
+            
+            if  !isCategSelecting {
+                categoryPickerView.hidden = false;
+                
+            } else {
+                categoryPickerView.hidden = true;
+            }
+            
+            isCategSelecting = !isCategSelecting;
+            
+            return false;
+        } else {
+            if  !categoryPickerView.hidden {
+                isCategSelecting = false;
+                categoryPickerView.hidden = true;
+            }
+            
+            if  prise > 0 {
+                textField.text = "\(prise)"
+            }
         }
         
-        return true
+        return true;
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        if textField.tag == 0 {
+            prise = (textField.text as NSString).doubleValue;
+            textField.text = "\(prise) \(currensy)";
+        }
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -71,8 +123,14 @@ class AddEntryViewController: UIViewController, UITextFieldDelegate, UITextViewD
     }
     
     
-    //MARK: Delegated methods - UITextViewDelegate
+    //MARK:  —UITextViewDelegate
     func textViewShouldBeginEditing(textView: UITextView) -> Bool {
+        
+        if  !categoryPickerView.hidden {
+            categoryPickerView.hidden = true;
+            isCategSelecting = false;
+        }
+        
         if textView.text == "category description" {
             textView.text = ""
         }
@@ -94,5 +152,58 @@ class AddEntryViewController: UIViewController, UITextFieldDelegate, UITextViewD
         }
         return true
     }
-
+    
+    //MARK: — UIPickerViewDataSouce
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return categories.count
+    }
+    
+    //MARK: — UIPickerViewDelegate
+    func pickerView(pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        
+        return 40.0
+    }
+    
+    func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView!) -> UIView {
+        var currCategory:CDEntryCategory = categories[row] as CDEntryCategory
+        
+        var pickerView = CategoryPickerView.init();
+        var pickerViewFrame = CGRect(x: 20, y: 300, width: 280, height: 40);
+        pickerView.viewWithFrame(pickerViewFrame, name: currCategory.cName, iconName: currCategory.cIconName);
+        
+        return pickerView
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        var choosenCategory: CDEntryCategory = categories[row] as CDEntryCategory;
+        chooseCategoryTextField.text = choosenCategory.cName;
+    }
+    
+    
+    //MARK: Private methods
+    func checkFillAllFields() -> Bool {
+        
+        if  countElements(moneyTextField.text) == 0 {
+            return false;
+        }
+        if  countElements(chooseCategoryTextField.text) == 0 {
+            return false;
+        }
+        
+        return true;
+    }
+    
+    func hideKeyboardAndPicker() {
+        moneyTextField.resignFirstResponder();
+        descriptionTextView.resignFirstResponder();
+        categoryPickerView.hidden = true;
+    }
+    
 }
+
+
+
