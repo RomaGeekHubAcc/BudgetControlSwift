@@ -67,7 +67,38 @@ class AddEntryViewController: UIViewController, UITextFieldDelegate, UITextViewD
         self.hideKeyboardAndPicker();
         
         if  self.checkFillAllFields() {
-            println("add entry");
+            let currDate = NSDate()
+            let moContext: NSManagedObjectContext = CoreDataManager.sharedInstance.managedObjectContext!
+            let currBudget: CDBudgetMonth = CDBudgetMonth.getBudget(NSDate(), context: moContext)
+            
+            if  self.entryType == EntryType.EntryTypeIncome.rawValue {
+                var newEntry: CDEntry = CDEntry.createEntry(
+                    currDate,
+                    categoryName: chooseCategoryTextField.text,
+                    categoryType:NSNumber(integer: EntryType.EntryTypeIncome.rawValue),
+                    entryDescription: descriptionTextView.text, money: NSDecimalNumber(double: prise),
+                    checkAddress: "",
+                    context: moContext)
+            } else if self.entryType == EntryType.EntryTypeExpense.rawValue {
+                var isAvailable: Bool = currBudget.isAvailableExpense(prise)
+                if  isAvailable {
+                    var newEntry: CDEntry = CDEntry.createEntry(
+                        currDate,
+                        categoryName: chooseCategoryTextField.text,
+                        categoryType:NSNumber(integer: EntryType.EntryTypeExpense.rawValue),
+                        entryDescription: descriptionTextView.text, money: NSDecimalNumber(double: prise),
+                        checkAddress: "",
+                        context: moContext)
+                }
+                
+            } else {
+                println("--- Error!!! UndefinedEntryType")
+            }
+            
+            self.dismissViewControllerAnimated(true, completion: nil)
+            
+        } else {
+            println("--- Fill all required fields! (Show alert later)")
         }
         
     }

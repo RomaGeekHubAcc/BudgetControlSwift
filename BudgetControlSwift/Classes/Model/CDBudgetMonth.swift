@@ -33,16 +33,51 @@ class CDBudgetMonth: NSManagedObject {
         
         budget = context.executeFetchRequest(fetchRequest, error: &error)!.first as? CDBudgetMonth
         
-        if  budget == nil {
+        if  budget === nil {
             let entityDescription: NSEntityDescription = NSEntityDescription.entityForName(className, inManagedObjectContext: context)!
             budget = CDBudgetMonth(entity: entityDescription, insertIntoManagedObjectContext: context)
             budget?.monthDate = monthDate!
+            budget?.currency = "UAH"
             
             if  (!context.save(&error)) {
                 println("Error save CDBudgetMonth -> \(error?.description)")
+            } else {
+                println("New budget created")
             }
         }
         
         return budget!
+    }
+    
+    
+    func calculationAllEntriesWithType(type:NSNumber) -> NSDecimalNumber {
+        var predicate: NSPredicate = NSPredicate(format: "eType == %@", type)!
+        
+        var allEntries: NSArray = entries.allObjects
+        allEntries = allEntries.filteredArrayUsingPredicate(predicate)
+        
+        var sum: NSDecimalNumber = NSDecimalNumber(double: 0.0)
+        
+        
+        for var i = 0; i < allEntries.count; i++ {
+            let currIncome: CDEntry = allEntries[i] as CDEntry
+            sum = sum.decimalNumberByAdding(currIncome.ePrice)
+        }
+        
+        
+        return sum;
+    }
+    
+    func isAvailableExpense(expensePrise:Double) -> Bool {
+        var available: Bool = false
+        
+        let incomeSum: Double = self.calculationAllEntriesWithType(NSNumber(integer: EntryType.EntryTypeIncome.rawValue)).doubleValue;
+        let expensesSum: Double = self.calculationAllEntriesWithType(NSNumber(integer: EntryType.EntryTypeExpense.rawValue)).doubleValue
+        
+        if  (incomeSum - expensesSum) - expensePrise > 0.0 {
+            available = true
+        }
+        
+        return available;
     }
 }

@@ -328,6 +328,11 @@
                     </tableView>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="140"/>
+                    <connections>
+                        <outlet property="availabelMoneyLabel" destination="bJX-Ob-6bY" id="aBX-f6-bHv"/>
+                        <outlet property="budgetCountLabel" destination="BRu-PR-2B8" id="6X4-cV-mi0"/>
+                        <outlet property="expensesCountLabel" destination="xFU-Bk-6bR" id="df9-8N-944"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oPU-ye-WGb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

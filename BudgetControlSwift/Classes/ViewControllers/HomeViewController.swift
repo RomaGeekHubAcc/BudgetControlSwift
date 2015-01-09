@@ -7,13 +7,14 @@
 //
 
 import UIKit
+import CoreData
 
 class HomeViewController: UIViewController {
-
+    
+    //MARK: Interfase methods
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
 
     override func didReceiveMemoryWarning() {
