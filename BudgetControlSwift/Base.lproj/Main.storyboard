@@ -67,22 +67,94 @@
         <!--Add Expense-->
         <scene sceneID="JBU-O8-Dgc">
             <objects>
-                <viewController id="s6G-jc-Xbg" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddExpenseViewController" id="s6G-jc-Xbg" customClass="AddExpenseViewController" customModule="BudgetControlSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aq3-o5-PKh"/>
                         <viewControllerLayoutGuide type="bottom" id="d4M-ss-m6h"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="G5k-Hq-fB8">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="0.00 UAH" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sEh-At-bLD">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="41"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="26K-Mg-oNV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="28"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7vq-6u-tQY">
+                                <rect key="frame" x="0.0" y="60" width="320" height="192"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iLn-7e-Qv1">
+                                    <size key="itemSize" width="75" height="95"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCollectionViewCell" id="6RQ-M8-SJe" customClass="CategoryCollectionViewCell" customModule="BudgetControlSwift" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="75" height="95"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="general_icon" translatesAutoresizingMaskIntoConstraints="NO" id="gNg-z8-kMJ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="HO7-5S-DxC">
+                                                    <rect key="frame" x="0.0" y="73" width="75" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="75" id="YHG-Ip-Gnt"/>
+                                                        <constraint firstAttribute="height" constant="21" id="dqv-yJ-ahR"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="gNg-z8-kMJ" firstAttribute="leading" secondItem="6RQ-M8-SJe" secondAttribute="leading" id="2nb-Zk-HL9"/>
+                                            <constraint firstAttribute="bottom" secondItem="gNg-z8-kMJ" secondAttribute="bottom" constant="20" id="Dzb-FI-3tw"/>
+                                            <constraint firstAttribute="trailing" secondItem="gNg-z8-kMJ" secondAttribute="trailing" id="Fh0-ZL-Tld"/>
+                                            <constraint firstAttribute="bottom" secondItem="HO7-5S-DxC" secondAttribute="bottom" constant="1" id="FzX-dI-Zo6"/>
+                                            <constraint firstAttribute="trailing" secondItem="HO7-5S-DxC" secondAttribute="trailing" id="TWa-mb-AFN"/>
+                                            <constraint firstItem="gNg-z8-kMJ" firstAttribute="top" secondItem="6RQ-M8-SJe" secondAttribute="top" id="ZhU-CA-Om2"/>
+                                            <constraint firstItem="HO7-5S-DxC" firstAttribute="top" secondItem="6RQ-M8-SJe" secondAttribute="top" constant="73" id="hgv-NY-Z9C"/>
+                                        </constraints>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sEh-At-bLD" firstAttribute="leading" secondItem="G5k-Hq-fB8" secondAttribute="leading" id="1w8-Kc-4E3"/>
+                            <constraint firstItem="sEh-At-bLD" firstAttribute="top" secondItem="aq3-o5-PKh" secondAttribute="bottom" id="Rad-ZG-BbV"/>
+                            <constraint firstAttribute="trailing" secondItem="sEh-At-bLD" secondAttribute="trailing" id="tYV-mJ-Mnh"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Add Expense" image="expense_icon" id="6qA-Y2-KMf"/>
+                    <navigationItem key="navigationItem" title="Add Expense" id="Mt2-oO-Ns0">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="BA2-is-eJp">
+                            <connections>
+                                <action selector="save:" destination="s6G-jc-Xbg" id="SLh-B5-EWo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="categoriesCollectionView" destination="7vq-6u-tQY" id="XbP-LB-ljh"/>
+                        <outlet property="priseTextField" destination="sEh-At-bLD" id="uYF-3D-Aqc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fxk-xT-DbM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="567" y="-553"/>
+            <point key="canvasLocation" x="980" y="-553"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="nI5-Zj-fAJ">
@@ -96,7 +168,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="s6G-jc-Xbg" kind="relationship" relationship="viewControllers" id="HB7-TO-hBC"/>
+                        <segue destination="Gbf-Dv-XiR" kind="relationship" relationship="viewControllers" id="HB7-TO-hBC"/>
                         <segue destination="K0m-Dg-X5m" kind="relationship" relationship="viewControllers" id="mCx-x4-pgM"/>
                         <segue destination="5Jn-ZW-r4J" kind="relationship" relationship="viewControllers" id="wp3-TM-udd"/>
                         <segue destination="yrg-NB-Cj4" kind="relationship" relationship="viewControllers" id="Uwp-kz-Rqb"/>
@@ -447,12 +519,33 @@
             </objects>
             <point key="canvasLocation" x="1743" y="885"/>
         </scene>
+        <!--Add Expense-->
+        <scene sceneID="0Xi-3U-wRQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Gbf-Dv-XiR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Add Expense" image="expense_icon" id="6qA-Y2-KMf"/>
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="kyO-QZ-442">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="s6G-jc-Xbg" kind="relationship" relationship="rootViewController" id="ckE-xd-i5F"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5X2-kF-QrV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="567" y="-553"/>
+        </scene>
     </scenes>
     <resources>
         <image name="bill_icon" width="25" height="25"/>
         <image name="budgetState_icon" width="25" height="25"/>
         <image name="chart_icon" width="25" height="25"/>
         <image name="expense_icon" width="25" height="25"/>
+        <image name="general_icon" width="50" height="50"/>
         <image name="settings_icon" width="25" height="25"/>
     </resources>
 </document>

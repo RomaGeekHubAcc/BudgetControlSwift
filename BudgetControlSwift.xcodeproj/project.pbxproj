@@ -24,6 +24,8 @@
 		A8D758411A52D621003370B2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D758401A52D621003370B2 /* HomeViewController.swift */; };
 		A8D758431A52F060003370B2 /* BudgetContainerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D758421A52F060003370B2 /* BudgetContainerTableViewController.swift */; };
 		A8D758561A53F9E8003370B2 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D758551A53F9E8003370B2 /* CoreDataManager.swift */; };
+		A8E504891A6109670011BDD1 /* AddExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E504881A6109670011BDD1 /* AddExpenseViewController.swift */; };
+		A8E5048C1A627B590011BDD1 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E5048B1A627B590011BDD1 /* CategoryCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,8 @@
 		A8D758491A53F79F003370B2 /* BudgetControlSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BudgetControlSwift-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		A8D758541A53F840003370B2 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = Classes/PrefixHeader.pch; sourceTree = "<group>"; };
 		A8D758551A53F9E8003370B2 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		A8E504881A6109670011BDD1 /* AddExpenseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddExpenseViewController.swift; sourceTree = "<group>"; };
+		A8E5048B1A627B590011BDD1 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +194,7 @@
 				A8D758401A52D621003370B2 /* HomeViewController.swift */,
 				A8D758421A52F060003370B2 /* BudgetContainerTableViewController.swift */,
 				A8A585301A5C0D8800BF87BB /* AddEntryViewController.swift */,
+				A8E504881A6109670011BDD1 /* AddExpenseViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -206,6 +211,7 @@
 		A8D758451A53F68B003370B2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A8E5048A1A627B300011BDD1 /* Cells */,
 				A881890B1A5E8CAA008D583B /* CategoryPickerView.swift */,
 			);
 			path = Views;
@@ -235,6 +241,14 @@
 				A8A585231A5AB40000BF87BB /* CDEntryCategory.swift */,
 			);
 			name = CDModel;
+			sourceTree = "<group>";
+		};
+		A8E5048A1A627B300011BDD1 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A8E5048B1A627B590011BDD1 /* CategoryCollectionViewCell.swift */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,6 +352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8D758431A52F060003370B2 /* BudgetContainerTableViewController.swift in Sources */,
+				A8E5048C1A627B590011BDD1 /* CategoryCollectionViewCell.swift in Sources */,
 				A8D7583B1A52D541003370B2 /* AppDelegate.swift in Sources */,
 				A8A585331A5C1FC000BF87BB /* Defines.swift in Sources */,
 				A8D7581A1A52D509003370B2 /* BudgetControlSwift.xcdatamodeld in Sources */,
@@ -350,6 +365,7 @@
 				A881890C1A5E8CAA008D583B /* CategoryPickerView.swift in Sources */,
 				A8A5852C1A5AD5F800BF87BB /* DateFormatterManager.swift in Sources */,
 				A8A585241A5AB40000BF87BB /* CDEntryCategory.swift in Sources */,
+				A8E504891A6109670011BDD1 /* AddExpenseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
