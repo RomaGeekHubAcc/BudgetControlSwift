@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BudgetControlSwift/Classes/Model/CDBudgetMonth.swift"
-            timestampString = "442496468.454083"
+            filePath = "BudgetControlSwift/Classes/ViewControllers/AddExpenseViewController.swift"
+            timestampString = "442749352.558684"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "calculationAllEntriesWithType(_:)"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "save(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

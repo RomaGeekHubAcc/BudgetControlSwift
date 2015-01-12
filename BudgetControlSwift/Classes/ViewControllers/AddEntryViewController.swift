@@ -15,10 +15,8 @@ class AddEntryViewController: UIViewController, UITextFieldDelegate, UITextViewD
     //MARK: variables
     var entryType: NSInteger?;
     var currensy: String = "";
-    
     var categories: [AnyObject] = [];
     var isCategSelecting: Bool = false;
-    
     var prise: Double = 0.0;
     
     
@@ -162,7 +160,7 @@ class AddEntryViewController: UIViewController, UITextFieldDelegate, UITextViewD
             isCategSelecting = false;
         }
         
-        if textView.text == "category description" {
+        if textView.text == "Entry description" {
             textView.text = ""
         }
         textView.textColor = UIColor.blackColor()
@@ -172,7 +170,7 @@ class AddEntryViewController: UIViewController, UITextFieldDelegate, UITextViewD
     
     func textViewDidEndEditing(textView: UITextView) {
         if textView.text.isEmpty {
-            textView.text = "category description"
+            textView.text = "Entry description"
             textView.textColor = UIColor.lightGrayColor()
         }
     }

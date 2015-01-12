@@ -10,4 +10,8 @@ import UIKit
 
 class CategoryCollectionViewCell: UICollectionViewCell {
     
+    //MARK: Outlets
+    @IBOutlet weak var iconImageView: UIImageView!
+    @IBOutlet weak var categoryNameLabel: UILabel!
+    
 }
